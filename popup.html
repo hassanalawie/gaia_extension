@@ -1,41 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ChatGPT Monitor</title>
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="popup.css" />
+    <title>ChatGPT Network Logger</title>
   </head>
   <body>
-    <div class="container">
-      <h1>ChatGPT Conversation Monitor</h1>
-      <div class="status-message" id="statusMessage">Loading data...</div>
+    <h2>Latest /conversation payload</h2>
 
-      <div class="data-section">
-        <h2>Last Request Payload:</h2>
-        <pre id="requestPayload">No request captured yet.</pre>
-      </div>
+    <h3>Request</h3>
+    <pre id="req">(waiting…)</pre>
 
-      <div class="data-section">
-        <h2>Last Response Payload:</h2>
-        <pre id="responsePayload">No response captured yet.</pre>
-      </div>
+    <h3>Response</h3>
+    <pre id="res">(waiting…)</pre>
 
-      <div class="timestamp" id="timestamp"></div>
-
-      <button
-        id="clearDataButton"
-        title="Clear the data currently displayed in this popup."
-      >
-        Clear Displayed Data
-      </button>
-      <button
-        id="reattachButton"
-        title="Attempt to re-check debugger status on the active ChatGPT tab."
-      >
-        Re-check Debugger
-      </button>
-    </div>
     <script src="popup.js"></script>
   </body>
 </html>
